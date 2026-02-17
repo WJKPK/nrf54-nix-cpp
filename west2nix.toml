@@ -1,0 +1,64 @@
+[manifest]
+group-filter = ["-babblesim", "-optional", "-testing"]
+
+[[manifest.projects]]
+name = "zephyr"
+url = "https://github.com/zephyrproject-rtos/zephyr"
+revision = "69edab8c972ad8fb591ba30c765aa6910e79b3bb"
+clone-depth = 1
+west-commands = "scripts/west-commands.yml"
+
+[manifest.projects.nix]
+hash = "sha256-D45T07HKjs7tJ8OeG6/yzgX8+6mRY2/6RZTrd8oygtc="
+
+[[manifest.projects]]
+name = "cmsis_6"
+url = "https://github.com/zephyrproject-rtos/CMSIS_6"
+revision = "30a859f44ef8ab4dc8f84b03ed586fd16ccf9d74"
+path = "modules/hal/cmsis_6"
+groups = ["hal"]
+
+[manifest.projects.nix]
+hash = "sha256-nTehISN0pu9gnOZMpGaBQ3DFmNxAqAZPGpvbKfEM35o="
+
+[[manifest.projects]]
+name = "hal_nordic"
+url = "https://github.com/zephyrproject-rtos/hal_nordic"
+revision = "5c1df3fe9bc144e558b3506cef6cf33652bb2539"
+path = "modules/hal/nordic"
+groups = ["hal"]
+
+[manifest.projects.nix]
+hash = "sha256-wKWhFs57MBnqv8VFgEgiDcfqrm5qFJU0NDtgkmOJZSk="
+
+[[manifest.projects]]
+name = "mbedtls"
+url = "https://github.com/zephyrproject-rtos/mbedtls"
+revision = "c5b06d89c9c498d8fc8659ce31f7e53137b6270f"
+path = "modules/crypto/mbedtls"
+groups = ["crypto"]
+
+[manifest.projects.nix]
+hash = "sha256-LSAC9ofincsigiBboMGFkh5dJL3rNWRLcI6oECIhq/U="
+
+[[manifest.projects]]
+name = "nrf_hw_models"
+url = "https://github.com/zephyrproject-rtos/nrf_hw_models"
+revision = "cf40f6dc7fc441ee6848ea2e177c4522588c1b8c"
+path = "modules/bsim_hw_models/nrf_hw_models"
+
+[manifest.projects.nix]
+hash = "sha256-/1Mh3R2cRrWBUyBbYiMKrqb+e67SQaH7eNE31EjdLJg="
+
+[[manifest.projects]]
+name = "segger"
+url = "https://github.com/zephyrproject-rtos/segger"
+revision = "50892fdbcf2f570e67baa72b8894a66b16946f72"
+path = "modules/debug/segger"
+groups = ["debug"]
+
+[manifest.projects.nix]
+hash = "sha256-EyrMOzsD8hClcAc778TsBe3dEFMtRAAeLzPxYK8NRcQ="
+
+[manifest.self]
+path = "app"

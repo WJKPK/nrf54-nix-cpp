@@ -1,0 +1,21 @@
+# West workspace (fetched by west update, not tracked in git)
+/zephyr/
+/modules/
+/tools/
+/.west/
+
+# Build output
+/build/
+/app/build/
+
+# Nix
+/result
+/result-*
+/.direnv/
+
+# Editor
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
