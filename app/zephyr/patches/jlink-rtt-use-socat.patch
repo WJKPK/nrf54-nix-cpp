@@ -1,0 +1,28 @@
+diff --git a/scripts/west_commands/runners/jlink.py b/scripts/west_commands/runners/jlink.py
+index 785ac145a8..b07849391e 100644
+--- a/scripts/west_commands/runners/jlink.py
++++ b/scripts/west_commands/runners/jlink.py
+@@ -10,6 +10,7 @@ import logging
+ import os
+ import re
+ import shlex
++import shutil
+ import socket
+ import subprocess
+ import sys
+@@ -385,7 +386,14 @@ class JLinkBinaryRunner(ZephyrBinaryRunner):
+                         break
+                     except ConnectionRefusedError:
+                         time.sleep(0.1)
+-                self.run_telnet_client('localhost', self.rtt_port, sock)
++                sock.close()
++                if shutil.which('socat') is not None:
++                    self.check_call([
++                        'socat', 'STDIO,raw,echo=0',
++                        f'TCP:localhost:{self.rtt_port}'
++                    ])
++                else:
++                    self.run_telnet_client('localhost', self.rtt_port)
+             except Exception as e:
+                 self.logger.error(e)
+             finally:

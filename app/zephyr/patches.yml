@@ -1,0 +1,12 @@
+patches:
+  - path: jlink-rtt-use-socat.patch
+    sha256sum: 5da6746ae20715c1ba99e7f9d3e2effbbb95c3a4ff384d24cce16f6570b2966f
+    module: zephyr
+    author: WJKPK
+    email: krupskiwojciech@gmail.com
+    date: 2026-02-22
+    upstreamable: true
+    comments: |
+      Use socat for west rtt when available to ensure raw
+      non-buffered input in RTT shells. Fall back to nc or
+      the Python client when socat is not present.

@@ -26,6 +26,7 @@ mkShell {
       "nrfutil-device"
     ])
     pkgs.segger-jlink
+    pkgs.socat
   ];
 
   shellHook = ''

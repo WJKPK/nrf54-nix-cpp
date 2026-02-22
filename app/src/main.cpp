@@ -7,12 +7,9 @@ int main()
 {
 	LOG_INF("nRF54L15 C++ Application started");
 
-	int counter = 0;
-
 	while (true) {
-		LOG_INF("Loop iteration: %d", counter);
-		counter++;
 		k_sleep(K_MSEC(1000));
+	    LOG_INF("Loop...");
 	}
 
 	return 0;
