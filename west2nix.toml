@@ -4,12 +4,12 @@ group-filter = ["-babblesim", "-optional", "-testing"]
 [[manifest.projects]]
 name = "zephyr"
 url = "https://github.com/zephyrproject-rtos/zephyr"
-revision = "69edab8c972ad8fb591ba30c765aa6910e79b3bb"
+revision = "fb350217cc199e7e6c5a40b4e50a04adbf038f8b"
 clone-depth = 1
 west-commands = "scripts/west-commands.yml"
 
 [manifest.projects.nix]
-hash = "sha256-D45T07HKjs7tJ8OeG6/yzgX8+6mRY2/6RZTrd8oygtc="
+hash = "sha256-z54vCKca+N1djr+qwrCwesE8wFhqGlwdq1GSVWmI6Ys="
 
 [[manifest.projects]]
 name = "cmsis_6"
@@ -24,12 +24,22 @@ hash = "sha256-nTehISN0pu9gnOZMpGaBQ3DFmNxAqAZPGpvbKfEM35o="
 [[manifest.projects]]
 name = "hal_nordic"
 url = "https://github.com/zephyrproject-rtos/hal_nordic"
-revision = "5c1df3fe9bc144e558b3506cef6cf33652bb2539"
+revision = "4dea410729da817a464f778533eb721473262e5b"
 path = "modules/hal/nordic"
 groups = ["hal"]
 
 [manifest.projects.nix]
-hash = "sha256-wKWhFs57MBnqv8VFgEgiDcfqrm5qFJU0NDtgkmOJZSk="
+hash = "sha256-xgRcp9p8kQqTKcI8FygFRfBuF3efq9KAPQa+V1XtAMQ="
+
+[[manifest.projects]]
+name = "littlefs"
+url = "https://github.com/zephyrproject-rtos/littlefs"
+revision = "8f5ca347843363882619d8f96c00d8dbd88a8e79"
+path = "modules/fs/littlefs"
+groups = ["fs"]
+
+[manifest.projects.nix]
+hash = "sha256-MuXfpmEE3z0ZOtfjp93aAh/7xZhShmHzwHC5nyN2QQg="
 
 [[manifest.projects]]
 name = "mbedtls"

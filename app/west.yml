@@ -3,6 +3,8 @@ manifest:
   remotes:
     - name: zephyrproject-rtos
       url-base: https://github.com/zephyrproject-rtos
+    - name: etl
+      url-base: https://github.com/ETLCPP
 
   projects:
     - name: zephyr
@@ -14,9 +16,15 @@ manifest:
         name-allowlist:
           - cmsis_6
           - hal_nordic
+          - littlefs
           - mbedtls
           - nrf_hw_models
           - segger
+
+    - name: etl
+      remote: etl
+      revision: 20.44.1
+      clone-depth: 1
 
   self:
     path: app

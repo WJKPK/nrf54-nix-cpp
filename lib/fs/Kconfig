@@ -1,0 +1,4 @@
+config FS_CPP 
+	bool "Support for fs c++ wrapper"
+	help
+	  This option enables the 'fs c++' library
